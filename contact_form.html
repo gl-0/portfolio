@@ -1,0 +1,57 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <link rel="stylesheet" href="styles/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title> 
+</head> 
+
+<body> 
+    <div id="top"></div>
+    <div id="nav">
+        <img class="logo" src="images/logo.png">
+        <a href="index.html" class="active">Home</a>
+        <!-- <a href="contact.html" class="active">Contact</a> -->
+        <a href="about.html" class="active">About</a>
+        <a href="contact_form.html" class="active">Contact Me</a>
+    </div>
+
+<header>
+    <h1 class="heading1">Contact Me</h1>
+</header>
+
+    <form action="https://formspree.io/f/mrbzgaro" method="POST"> 
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" size="30" required>
+
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="phone" size="30" required>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" size="30" required>
+
+        <label for="pronouns">Preferred Pronouns</label>
+        <select name="pronouns" id="pronouns">
+            <option value="select">(Please Select Option)</option>
+            <option value="he-him">He/Him</option>
+            <option value="she-her">She/Her</option>
+            <option value="they-them">They/Them</option>
+            <option value="other">Other(write below)</option>
+        </select>
+        <textarea id="pronouns" name="pronouns" rows="1" cols="50" placeholder="My preferred pronouns are..."></textarea>
+        <label for="message">Message:</label>
+         <textarea id="message" name="message" rows="5" cols="50" placeholder="Your message..."></textarea>
+<br>
+<!-- <input type="submit" value="Submit"> -->
+        <button type="submit">
+        <img src="images/send-icon.png" alt="send button" border="0">
+        </button>
+
+        <!-- Form elements will go here --> 
+
+    </form> 
+
+</body> 
+
+</html> 
