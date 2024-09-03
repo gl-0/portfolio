@@ -1,26 +1,34 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-<head> 
-    <link rel="stylesheet" href="styles/style.css">
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <link rel="stylesheet" href="styles/contact-test.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Form</title> 
-</head> 
-
-<body> 
-    <div id="top"></div>
-    <div id="nav">
-        <img class="logo" src="images/logo.png">
-        <a href="index.html" class="active">Home</a>
+    <title>Hello, world. I'm here.</title>
+</head>
+<body class="light">
+    <div id="main-container">
+        <div id="logo-box">
+            <img id="logo" class="light" src="images/logo.png">
+            <img id="logo-dark" class="light" src="images/logo-darkmode.png">
+        </div>
+        <div id="dark-mode">
+            <button class="light" id="btn" onclick="changeText(); changeLogo()">Goin' Dark</button>
+        </div>
+        <div id="title" class="light">
+            <h1 class="light">George Langdon</h1>
+        </div>
+        <div id="navbar">
+            <a href="test.html" class="active light">HOME</a>
         <!-- <a href="contact.html" class="active">Contact</a> -->
-        <a href="about.html" class="active">About</a>
-        <a href="contact_form.html" class="active">Contact Me</a>
-    </div>
-
+            <a href="about.html" class="active light">ABOUT</a>
+            <a href="projects.html" class="active light">PROJECTS</a>
+            <a href="contact_form.html" class="active light" id="contact-link">CONTACT ME</a>
+        </div>
 <header>
-    <h1 class="heading1">Contact Me</h1>
+    <h1 id="heading1" class="light">Contact Me</h1>
 </header>
-
+    <div id="contact-form">
     <form action="https://formspree.io/f/mrbzgaro" method="POST"> 
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" size="30" required>
@@ -44,14 +52,15 @@
          <textarea id="message" name="message" rows="5" cols="50" placeholder="Your message..."></textarea>
 <br>
 <!-- <input type="submit" value="Submit"> -->
-        <button type="submit">
+        <button type="submit" id="submit-btn">
         <img src="images/send-icon.png" alt="send button" border="0">
         </button>
 
         <!-- Form elements will go here --> 
 
     </form> 
-
+</div>
+<script src="scripts/test.js"></script>
 </body> 
 
 </html> 
