@@ -1,0 +1,221 @@
+*{
+  box-sizing: border-box;
+
+}
+
+:root {
+  --base-color: rgb(201, 219, 197);
+  --base-variant: rgb(241, 248, 239);
+  --text-color: black;
+  --secondary-text: #0047ab;
+  --primary-color: #5f9ea0;
+
+}
+
+
+html {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: var(--base-color);
+  /* border: 3px solid rgb(255, 153, 1); */
+  padding: 10px 20px 50px 10px;
+  margin: 0 auto;
+  /*font-size: 18px;  px means "pixels": the base font size is now 10 pixels high */
+  /*font-family: "Open Sans", sans-serif; /* this should be the rest of the output you got from Google Fonts */
+}
+
+
+body {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  /* font-family: CustomFont; */
+  font-family: Arial, sans-serif, Helvetica;
+  border-radius: 10px;
+  background-color: var(--base-variant);
+  /* border: 2px solid rgba(0, 0, 0, 0.58); */
+  padding: 20px;
+  margin-top: 50px;
+  width:80%;
+  height: 100%;
+  
+}
+
+#top {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  border-bottom:solid var(--primary-color);
+  border-radius: 0px;
+  border-width: 10px;
+  padding-bottom:12px;
+  padding-top:0px;
+  box-shadow: 0px 2px 0px currentcolor;
+  /* border: purple dashed 3px; */
+}
+
+#nav {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  align-items:center;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 16px;
+  font-weight: bold;
+  /* background-color: rgba(95, 158, 160, 0.801); */
+  /* background-image: linear-gradient(rgba(69, 77, 69, 0.344), rgba(95, 158, 160, 0.241)); */
+  
+  /* border-bottom:solid rgb(95, 158, 160);
+  border-radius: 0px;
+  border-width: 10px;
+  padding-bottom:12px;
+  padding-top:0px; */
+  /* border: 5px solid rgba(255, 0, 0, 0.552); */
+  /* box-shadow: 0px 2px 0px currentcolor;  */
+}
+
+
+
+@font-face {
+  font-family: 'CustomFont'; /* Name your font family */
+  src: url('week1\fonts\CASTELAR.TTF'); /* Locate the .ttf file within your directory*/
+}
+
+#nav img {
+  display: flex;
+  width: 15%;
+}
+
+#nav a {
+  display: flex;
+  color:var(--text-color);
+  text-decoration: none;
+  padding:8px;
+  font-family: CustomFont;
+  /* background-color: rgba(255, 255, 255, 0.897); */
+  border: inherit;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-width: 3px;
+  border-style:groove;
+  transition: color 0.3s ease;
+}
+
+#nav a:hover {
+  color:var(--secondary-text);
+}
+
+#nav a:focus {
+  color:#651fc294;
+
+}
+
+.intro {
+  /* border: red dotted 2px; */
+  border-radius: 80px;
+  background-color:slategray;
+  padding: 20px;
+}
+
+.aboutMe {
+  border: dotted blue 2px;
+  border-radius: 80px;
+  padding: 20px;
+}
+
+.shapes {
+  display:block;
+  
+}
+
+#triangle {
+  border-radius: 0px;
+  width: 10px;
+  height: 10px;
+  align-content: center;
+
+  border-left: solid transparent 25px;
+  border-right: solid transparent 25px;
+  border-bottom: rgb(0, 184, 0) solid 50px;
+  background-color: black;
+}
+
+/* paragraph style */
+p {
+    color: var(--text-color);
+    letter-spacing: 1px;
+    line-height: 1.5;
+    
+  }
+
+  /*heading 2 */
+  h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+/* shared style */
+  h1 
+  h2 {
+    color: rgb(83, 141, 143);
+    
+  }
+
+  .bold {
+    color:#0047ab;
+  }
+
+  .center {
+    text-align:center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+
+  }  
+
+
+  .banner {
+
+    width:96%;
+    padding:5px;
+  }
+
+  /*heading 1 style */
+.heading1 {
+    color:rgb(0, 0, 0);
+    font-size: 30px;
+    margin: 1;
+  padding: 20px 1;
+  text-shadow: 3px 3px 25px rgb(134, 130, 130);
+  text-align: center;
+ 
+  }
+
+  /* ----- DARK MODE ----- */
+/* #btn {
+
+} */
+
+.light {
+  color: black;
+}
+
+  .dark {
+    --base-color: rgb(98, 107, 96);
+    --base-variant: rgb(70, 70, 70);
+    color: whitesmoke;
+  }
+
+  #btn.dark {
+    background-color: rgb(46, 46, 46);
+    box-shadow: white inset;
+    color: whitesmoke;
+  }
+
+  #nav a.dark {
+    color: white;
+  }

@@ -1,0 +1,319 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --base-color: white;
+  --base-variant: ;
+  --text-color: black;
+  --secondary-text: #0047ab;
+  --primary-color: #5f9ea0ad;
+}
+
+html {
+  /* border: rgb(114, 248, 4) dashed 2px;     */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 95%;
+  height: 95%;
+  margin: 20px;
+
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  line-height: 1.5;
+}
+
+#main-container {
+  display: grid;
+  grid-template-rows: 200px 200px 400px 200px;
+  grid-template-columns: 300px 600px 600px;
+  grid-template-areas:
+      "logo title gallery"
+      "darkmode heading gallery"
+      "navbar text gallery"
+      "navbar contact gallery";
+
+  row-gap: 20px;
+  column-gap: 50px;
+  justify-content: center;
+  height: 100vh;
+  /* width: 100%; */
+  /* min-width: fit-content; */
+
+  /* border: magenta dashed 2px; */
+}
+
+/* GRID CONTAINER TEST */
+#main-container div{
+  /* border: black dotted 2px; */
+  border-radius: 30px;
+  padding: 30px;
+}
+
+#logo-box {
+  display: inline-block;
+  grid-area: logo;
+  /* grid-column: 1;
+  grid-row: 1; */
+
+  align-items: flex-start;
+  align-content: flex-start;
+  
+}
+
+#title {
+  grid-area: title;
+    /* grid-column: 2/4;
+    grid-row: 1; */
+
+    font-size: 30px;
+    text-align: left;
+    align-content: start;
+}
+
+#heading1 {
+  grid-area: heading;
+  /* grid-column: 2/4;
+  grid-row: 1; */
+
+  font-size: 30px;
+  text-align: left;
+  align-content: start;
+}
+
+#about-text {
+  grid-area: text;
+}
+
+
+/* ///// IMAGE GALLERY //// */
+.gallery {
+  /* display: flex;
+  flex-direction: column; */
+  grid-area: gallery;
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  /* border: magenta dashed 2px; */
+}
+
+/* hide images by default */
+.mySlides {
+  display:none;
+}
+
+.mySlides img {
+  border-radius: 30px;
+  margin-top: 80px;
+}
+
+/* next/prev buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 10px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* positions 'next' button on the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* caption text */
+.text {
+  color: #000000;
+  /* border: red dashed 2px; */
+  font-size: 18px;
+  padding: 8px 12px;
+  position: absolute;
+  /* bottom: 8px; */
+  width:80%;
+  text-align: center;
+}
+
+.numbertext {
+  color: #000000;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Dots and bullets */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover{
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+/* ////////////////////////// */
+
+#navbar {
+  display: flex;
+  flex-direction: column;
+  grid-area: navbar;
+  /* grid-column: 1;
+  grid-row: 3/5; */
+  justify-content: space-between;   
+}
+
+#navbar a{
+  /* border: #0047ab solid 2px; */
+  /* background-color: white; */
+  border-radius: 30px;
+  text-align: center;
+}
+
+#navbar a:hover {
+  color:var(--secondary-text);
+}
+
+#navbar a:focus {
+  color:#651fc294;
+
+}
+
+#aboutLink{
+  border: var(--primary-color) solid 2px;
+}
+
+#dark-mode{
+  align-content: center;
+  text-align: center;
+  grid-column: 1;
+  grid-row: 2;
+}
+
+#btn {
+  width: 200px;
+  height:50px;
+  border-radius: 10px;
+  box-shadow:rgb(0, 0, 0) 10px 5px inset;
+}
+
+/* -------------------------------------------------- */
+
+
+#logo.light {
+  width: inherit;
+  display:block;
+  position: sticky;
+  border-radius: 40px;
+  width: 200px;
+}
+
+#logo.dark {
+  display: none;
+}
+
+#logo-dark.light {
+  display: none;
+}
+
+#logo-dark.dark {
+  width: inherit;
+  display:block;
+  position: sticky;
+  border-radius: 40px;
+  width: 200px;
+}
+
+/* ----- DARK MODE ----- */
+/* #btn {
+
+} */
+
+.light {
+  color: black;
+  background-color: white;
+}
+
+.dark {      
+  --base-color: rgb(98, 107, 96);
+  --base-variant: rgb(70, 70, 70);
+  color: whitesmoke;
+  background-color: black;
+}
+
+  #btn.dark {
+    background-color: rgb(0, 0, 0);
+    box-shadow: white inset 10px 5px;
+    color: whitesmoke;
+    border: white solid 1px;
+  }
+
+  #navbar a.dark {
+    color: white;
+  }
+
+  /* #main-container div.dark{
+      border: white dotted 2px;
+  } */
+
+  /* #logo-dark {
+      display: none;
+  }
+
+  @media (prefers-color-scheme: dark) {
+      .dark{
+      display: block;
+  }
+  .light {
+      display:none;
+  }
+} */
+
+@media only screen and (max-width:800px){
+  #main-container {
+      grid-template-columns: 0.1fr 1fr;
+      grid-template-rows: 0.4fr 0.4fr 2fr 2fr 2fr 2fr 2fr;
+      grid-template-areas:
+      "logo title"
+      "darkmode darkmode"
+      "navbar navbar"
+      "intro intro"
+      "interests interests"
+      "projects projects"
+      "contact contact";
+  }
+  #navbar {
+      display: flex;
+  flex-direction: row;
+  }
+}
