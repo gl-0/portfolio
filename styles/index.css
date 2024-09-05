@@ -15,7 +15,7 @@
 
 html {
   display: flex;
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
   background-color: var(--base-color);
   /* border: 3px solid rgb(255, 153, 1); */
   padding: 10px 20px 50px 10px;
@@ -33,12 +33,19 @@ body {
   font-family: Arial, sans-serif, Helvetica;
   border-radius: 10px;
   background-color: var(--base-variant);
-  /* border: 2px solid rgba(0, 0, 0, 0.58); */
+  border: 2px solid rgba(255, 0, 0, 0.58);
   padding: 20px;
   margin-top: 50px;
   width:80%;
   height: 100%;
-  
+}
+
+main {
+  width: 100%;
+  border: magenta dashed 3px;
+  padding: 20px;
+  /* justify-content: center;
+  align-content: center; */
 }
 
 #top {
@@ -128,21 +135,33 @@ body {
 
 .shapes {
   display:block;
+  border-bottom: var(--primary-color) solid 20px;
+  background-color:inherit;
   
 }
 
 #triangle {
   border-radius: 0px;
-  width: 10px;
-  height: 10px;
+  width: 20px;
+  height: 20px;
   align-content: center;
+  transform: rotate(90deg);
 
-  border-left: solid transparent 25px;
-  border-right: solid transparent 25px;
-  border-bottom: rgb(0, 184, 0) solid 50px;
-  background-color: black;
+  border-left: solid transparent 15px;
+  border-right: solid transparent 15px;
+  /* border-bottom: rgb(0, 184, 0) solid 50px;
+  background-color:inherit; */
 }
 
+#square {
+  width: 40px;
+  height: 10px;
+}
+
+#circle{
+  border-radius:100%;
+  width: 40px;
+}
 /* paragraph style */
 p {
     color: var(--text-color);
@@ -153,16 +172,15 @@ p {
 
   /*heading 2 */
   h2 {
+    height: 100px;
     font-size: 20px;
     text-align: center;
+    border: orange dashed 2px;
+    justify-content: center;
+    align-content: center;
   }
 
 /* shared style */
-  h1 
-  h2 {
-    color: rgb(83, 141, 143);
-    
-  }
 
   .bold {
     color:#0047ab;
