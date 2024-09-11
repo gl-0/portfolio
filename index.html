@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="light">
 <head>
-    <link rel="stylesheet" href="styles/test.css">
+    <link rel="stylesheet" href="styles/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello, world. I'm here.</title>
@@ -13,35 +13,53 @@
             <img id="logo-dark" class="light" src="images/logo-darkmode.png">
         </div>
         <div id="dark-mode">
-            <button class="light" id="btn" onclick="changeText(); changeLogo()">Goin' Dark</button>
+            <button class="light" id="btn" onclick="toggleDark()">Goin' Dark</button>
         </div>
         <div id="title" class="light">
             <h1 class="light">George Langdon</h1>
         </div>
         <div id="navbar">
-            <a href="index.html" class="active light" id="homeLink">HOME</a>
+            <a href="index.html" class="light" id="homeLink">HOME</a>
         <!-- <a href="contact.html" class="active">Contact</a> -->
-            <a href="about.html" class="active light">ABOUT</a>
-            <a href="projects.html" class="active light">PROJECTS</a>
-            <a href="contact_form.html" class="active light">CONTACT ME</a>
+            <a href="about.html" class="light">ABOUT</a>
+            <a href="projects.html" class="light">PROJECTS</a>
+            <a href="contact_form.html" class="light">CONTACT ME</a>
         </div>
         <div id="intro" class="light">
             <p class="light">I worked in the Television industry for 7 years, working my way up to Assistant Producer...</p>
             <p class="light">And then the industry turned into the Upside Down and now I'm here, learning <span class="bold">Web Development</span>!</p>
             <p class="light">Starting from the beginning again is a scary thing to deal with. But if you don't try something new, you might regret it.</p></div>
         <div id="interests" class="light">
-            <h2>My Interests</h2>
-            <p >Lover of all things nerdy:</p>
+            <h2>Interests</h2>
             <ul>
-                <li>Technology</li>
+                Lover of all things nerdy:
+                    <ul><li>Technology</li>
                 <li>Movies</li>
-                <li>Video Games</li>
-                <li>Anime Memes</li>
+                <li>Video Games (3 time Elden Lord!)</li>
+                <li>Anime</li>
+            </ul>
+            <br>
+            <li>My guilty pleasure is choosing the perfect playlist for a roadtrip.</li>
             </ul>
         </div>
-
+        <div id="skills" class="light"><h2>Skills and Languages</h2>
+            <ul id="lang-list"><h3>Languages</h3>
+                <li>HTML / CSS</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+                <li>SQL</li>
+                <li>Sarcasm</li>
+            </ul>
+            <ul id="skill-list"><h3>Skills</h3>
+                <li>Attention to detail</li>
+                <li>Teamwork</li>
+                <li>Time-management</li>
+                <li>Communication</li>
+                <li>Negotiation</li>
+            </ul>
+        </div>
 <!-- ----- PROJECT GALLERY ----- -->
-        <div id="projects" >
+        <!-- <div id="projects" >
             <h2>Project Gallery</h2>
             <div class="gallery">
 
@@ -51,13 +69,13 @@
                     <div class="text">Simple Calculator</div>
                 </div>
             </div>
-        </div>
+        </div> -->
 <!-- --------------------------- -->
         
     <div id="contact">If I'm your kind of person,
         <br><a href="mailto:georgelangdon.bootcamp@justit.co.uk">shout at me</a>
     </div>
     </div>
-<script src="scripts/test.js"></script>
+<script src="scripts/script.js"></script>
 </body>
 </html>

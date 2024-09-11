@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <link rel="stylesheet" href="styles/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello, world. I'm here.</title>
+</head>
+<body class="light">
+    <div id="projects-container">
+        <div id="logo-box">
+            <img id="logo" class="light" src="images/logo.png">
+            <img id="logo-dark" class="light" src="images/logo-darkmode.png">
+        </div>
+        <div id="dark-mode">
+            <button class="light" id="btn" onclick="toggleDark()">Goin' Dark</button>
+        </div>
+        <div id="title" class="light">
+            <h1 class="light">George Langdon</h1>
+        </div>
+        <div id="navbar">
+            <a href="index.html" class="light" >HOME</a>
+        <!-- <a href="contact.html" class="active">Contact</a> -->
+            <a href="about.html" class="light">ABOUT</a>
+            <a href="projects.html" class="light" id="projectsLink">PROJECTS</a>
+            <a href="contact_form.html" class="light">CONTACT ME</a>
+        </div>
+
+        <div id="projectsMenu" class="light">
+            <div class="list light">
+                <button id="project1" type="button" onclick="currentSlide(1); changeClass1()">A SIMPLE CALCULATOR.
+                    <br><br><p>Nothing to write home about, but every dog needs a home...</p>
+                    <a href="calc-app.html">View Project</a><br>
+                </button></div>
+
+            <div class="list light">
+                <button  type="button" onclick="currentSlide(2); changeClass2()">ATM TERMINAL APP
+                    <br><br><p>For those who dream of more than pennies in your purse.</p>
+                    <br><br>
+                </button></div>
+
+            <div class="list light">
+                <button type="button" onclick="currentSlide(3); changeClass3()">EXPENSE TRACKER
+                    <br><br><p>
+                    Times are tough, and they'll only get tougher.
+                    So keep track of your dough with this Expense Tracker!</p>
+                </button></div>
+                
+            <div class="list light">
+                <button type="button" onclick="currentSlide(4); changeClass4()">TO-DO WEB APP
+                    <br><br><p>Ironically, completing this is on my to-do list.</p>
+                </button></div>
+            </ul>
+        </div>
+        
+            <h2>Project Gallery</h2>
+            <div class="project-gallery">
+
+                <div id="img1" class="mySlides fade center">
+                    <div class="numbertext light">1 / 4</div>
+                    <div class="about-text light">Simple Calculator</div>
+                    <img src="images/calc.png" style="width:760px">
+                </div>
+    
+                <div id="img2" class="mySlides fade center">
+                    <div class="numbertext light">2 / 4</div>
+                    <div class="about-text light">Terminal-based ATM App</div>
+                    <img src="images/atm-crop.png" style="width:70%">    
+                </div>
+    
+                <div id="img3" class="mySlides fade center">
+                    <div class="numbertext light">3 / 4</div>
+                    <div class="about-text light">Expense Tracker</div>
+                    <img src="images/expense-tracker.png" style="width:55%">   
+                </div>
+                
+                <div id="img4" class="mySlides fade center">
+                    <div class="numbertext light">4 / 4</div>
+                    <div class="about-text light">To-Do Web App</div>
+                    <img src="images/to-do.png" style="width:83%">   
+                </div>
+    <!-- NEXT AND PREVIOUS BUTTONS -->
+                <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+            
+             
+        </div>
+        <div style="text-align: center">
+                <span class="project-dot fade" onclick="currentSlide(1)"></span>
+                <span class="project-dot fade" onclick="currentSlide(2)"></span>
+                <span class="project-dot fade" onclick="currentSlide(3)"></span>
+                <span class="project-dot fade" onclick="currentSlide(4)"></span>
+            </div>
+            <br>
+        </div>
+        </div>
+
+    </div>
+    <script src="scripts/script.js"></script>
+    </body>
+    </html>
