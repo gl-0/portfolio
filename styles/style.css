@@ -38,8 +38,8 @@ html {
     font-size: 18px;
     letter-spacing: 2px;
     line-height: 1.5;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;
+    align-items: center; */
     
     /*? animation */
     animation: fadeInAnimation ease 2s;
@@ -253,7 +253,7 @@ justify-self: center;
 
     row-gap: 20px;
     column-gap: 50px;
-    justify-items: center;
+    /* justify-items: center; */
     height: 100vh;
 }
 
@@ -331,18 +331,36 @@ justify-self: center;
 } */
 
 #contact{
+    display: flex;
+    flex-direction: column;
+    
     background-color: var(--secondary-color);
     grid-area: contact;
     width: 100%;
     min-width: fit-content;
     text-align: center;
-    
     font-size: larger;
+    justify-content: center;
+    align-items: center;
 }
 
-#github {
-    background-color: inherit;
+#logos {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    /* border: magenta dashed 3px; */
+    align-content: center;
+    justify-content: space-evenly;
 }
+
+#github-logo{
+    display: block;
+    width: 100px;
+    height: auto;
+    /* border: black solid 2px; */
+    /* background-color: inherit; */
+}
+
 /** /////////////////////////////////////// */
 /** ////////// ----- ABOUT ----- ////////// */
 /** /////////////////////////////////////// */
