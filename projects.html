@@ -1,59 +1,59 @@
 <!DOCTYPE html>
-<html lang="en" class="light">
+<html lang="en">
 <head>
     <link rel="stylesheet" href="styles/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello, world. I'm here.</title>
 </head>
-<body class="light">
+<body>
     <div id="projects-container">
         <div id="logo-box">
-            <img id="logo" class="light" src="images/logo.png">
-            <img id="logo-dark" class="light" src="images/logo-darkmode.png">
+            <img id="logo" src="images/logo.png">
+            <img id="logo-dark" src="images/logo-darkmode.png">
         </div>
         <div id="dark-mode">
-            <button class="light" id="btn" onclick="toggleDark()">Goin' Dark</button>
+            <button id="btn" onclick="toggleDark()">&#x263E / &#x263C</button>
         </div>
-        <div id="title" class="light">
-            <h1 class="light">George Langdon</h1>
+        <div id="title">
+            <h1>George Langdon</h1>
         </div>
         <div id="navbar">
-            <a href="index.html" class="light" >HOME</a>
+            <a href="index.html">HOME</a>
         <!-- <a href="contact.html" class="active">Contact</a> -->
-            <a href="about.html" class="light">ABOUT</a>
-            <a href="projects.html" class="light" id="projectsLink">PROJECTS</a>
-            <a href="contact_form.html" class="light">CONTACT ME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="projects.html" id="projectsLink">PROJECTS</a>
+            <a href="contact_form.html">CONTACT ME</a>
         </div>
 
-        <div id="projectsMenu" class="light">
-            <div class="list light">
+        <div id="projectsMenu">
+            <div class="list">
                 <button id="project1" type="button" onclick="currentSlide(1); changeClass1()">A SIMPLE CALCULATOR.
                     <br><br><p>Nothing to write home about, but every dog needs a home...</p>
-                    <a href="calc-app.html">View Project</a>
-                    <a href="https://github.com/gl-0/portfolio/blob/main/calc-app.html">View on GitHub</a><br>
+                    <a href="https://github.com/gl-0/portfolio/blob/main/calc-app.html"><img src="images/github-logo.png"></a>
+                    <a class="demo" href="calc-app.html">&#9205;</a>
                 </button></div>
 
-            <div class="list light">
+            <div class="list">
                 <button  type="button" onclick="currentSlide(2); changeClass2()">ATM TERMINAL APP
                     <br><br><p>For those who dream of more than pennies in your purse.</p>
-                    <a href="https://github.com/gl-0/atm-terminal">View on GitHub</a><br>
+                    <a href="https://github.com/gl-0/atm-terminal"><img src="images/github-logo.png"></a> 
                     <br><br>
                 </button></div>
 
-            <div class="list light">
+            <div class="list">
                 <button type="button" onclick="currentSlide(3); changeClass3()">EXPENSE TRACKER
                     <br><br><p>
                     Times are tough, and they'll only get tougher.
                     So keep track of your dough with this Expense Tracker!</p>
-                    <a href="https://github.com/gl-0/expense-tracker">View on GitHub</a><br>
+                    <a href="https://github.com/gl-0/expense-tracker"><img src="images/github-logo.png"></a>
                 </button></div>
                 
-            <div class="list light">
+            <div class="list">
                 <button type="button" onclick="currentSlide(4); changeClass4()">TASK APP
                     <br><br><p>Ironically, completing this is on my to-do list.</p>
-                    <a href="https://gl-0.github.io/tasks/">View Project</a>
-                    <a href="https://github.com/gl-0/tasks">View on GitHub</a><br>
+                    <a href="https://github.com/gl-0/tasks"><img src="images/github-logo.png"></a> 
+                    <a class="demo" href="https://gl-0.github.io/tasks/">&#9205;</a>
                 </button></div>
             </ul>
         </div>
@@ -62,26 +62,26 @@
             <div class="project-gallery">
 
                 <div id="img1" class="mySlides fade center">
-                    <div class="numbertext light">1 / 4</div>
-                    <div class="about-text light">Simple Calculator</div>
-                    <img src="images/calc.png" style="width:760px">
+                    <div class="numbertext">1 / 4</div>
+                    <div class="about-text">Simple Calculator</div>
+                    <img src="images/calc.png" style="width:75%">
                 </div>
     
                 <div id="img2" class="mySlides fade center">
-                    <div class="numbertext light">2 / 4</div>
-                    <div class="about-text light">Terminal-based ATM App</div>
+                    <div class="numbertext">2 / 4</div>
+                    <div class="about-text">Terminal-based ATM App</div>
                     <img src="images/atm-crop.png" style="width:70%">    
                 </div>
     
                 <div id="img3" class="mySlides fade center">
-                    <div class="numbertext light">3 / 4</div>
-                    <div class="about-text light">Expense Tracker</div>
+                    <div class="numbertext">3 / 4</div>
+                    <div class="about-text">Expense Tracker</div>
                     <img src="images/expense-tracker.png" style="width:55%">   
                 </div>
                 
                 <div id="img4" class="mySlides fade center">
-                    <div class="numbertext light">4 / 4</div>
-                    <div class="about-text light">Tasks App</div>
+                    <div class="numbertext">4 / 4</div>
+                    <div class="about-text">Tasks App</div>
                     <img src="images/tasks-crop.png" style="width:75%">   
                 </div>
     <!-- NEXT AND PREVIOUS BUTTONS -->
