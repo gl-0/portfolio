@@ -9,7 +9,7 @@
 
 :root {
     --base-color: white;
-    --background: rgba(134, 207, 179, 0.37);
+    --background: rgba(134, 207, 179, 0.356);
     /* --background: #9798a023; */
     --background-secondary: rgba(15, 15, 15, 0.13);
     --background-dark: black;
@@ -47,16 +47,13 @@ html {
     /*? animation */
     animation: fadeInAnimation ease 2s;
     animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+    animation-fill-mode:forwards;
 }
 
-#btn {
-    font-family: myFont;
-}
 
 @keyframes fadeInAnimation {
     0% {
-        opacity: 0;
+        opacity: 0.7;
     }
     100% {
         opacity: 1;
@@ -136,6 +133,7 @@ a:link {
 html #dark-mode #btn {
     width: 200px;
     height:50px;
+    
     border-radius: 10px;
     box-shadow:rgb(0, 0, 0) 10px 5px inset;
     background: none;
@@ -183,6 +181,7 @@ html.dark #dark-mode #btn{
     box-shadow: white inset 10px 5px;
     color: whitesmoke;
     border: white solid 1px;
+    
 }
 
 html.dark #navbar a {
@@ -190,6 +189,15 @@ html.dark #navbar a {
     background: none;
 }
 
+html.dark .numbertext{
+    color: var(--text-color-dark);
+}
+html.dark .about-text{
+    color: var(--text-color-dark);
+}
+
+/* html.dark #submit-btn {
+} */
 /*? ///////////////////////////////////// ----- SMALL SCREENS ----- ///////////////////////////////////// */
 /*? ///////////////////////////////////////////////////////////////////////////////////////////////////// */
 /*       //////////        ////    ////     
@@ -317,8 +325,8 @@ html.dark #navbar a {
     width: 100%;
     grid-area: title;
     font-size: 30px;
-    text-align: left;
-    align-content: start;
+    text-align: center;
+    align-content: center;
 }
 
 
@@ -329,24 +337,36 @@ html #navbar #homeLink{
 }
 
 #intro {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-self: center;
+    /* border: magenta dashed 2px; */
     grid-area: intro;
-    width: 80%;
+    width: 100%;
     text-align:justify;
     justify-content: center;
 }
 
 #interests {
+    display: flex;
+    flex-wrap: wrap;
     grid-area: interests;
     background-color: var(--primary-color);
     width: 100%;
     min-width: fit-content;
     justify-content: center;
-    
 }
+
 #interests ul{
-    list-style-type: circle;
+    list-style-type: none;
+    text-align: left;
 }
 #skills {
+    display: flex;
+    flex-wrap: wrap;
+
+    text-align: center;
     background-color: var(--primary-color);
     width: 100%;
     display: grid;
@@ -358,7 +378,8 @@ html #navbar #homeLink{
 }
 
 #skills ul {
-    list-style-type:circle;
+    list-style-type:none;
+    text-align: left;
 }
 
 #skills h2 {
@@ -385,20 +406,31 @@ html #navbar #homeLink{
 }
 
 #logos {
+    /* border: magenta dashed 1px; */
     display: flex;
     flex-direction: row;
-    width: 50%;
-    /* border: magenta dashed 3px; */
+    width: 80%;
+    height: 70%;
     align-content: center;
-    justify-content: space-evenly;
+    justify-content: center;
+}
+#logos a{
+    color:var(--text-color);
+    /* border: magenta solid 2px; */
+    /* padding-bottom: 10px */
+    /* margin-bottom: 20px; */
+}
+#logos a:hover{
+    /* background-color: rgb(49, 156, 255); */
+    color: #0047ab;
+    
 }
 
 #github-logo{
     display: block;
     width: 100px;
     height: auto;
-    /* border: black solid 2px; */
-    /* background-color: inherit; */
+    padding-top: 10px;
 }
 
 /** ///////////////////////////////////////////////////////////////////////////////////////////////////// */
@@ -457,8 +489,8 @@ html #about p {
     /* height:fit-content; */
     width: 100%;
     height: auto;
-    /* background-color: var(--secondary-color); */
-    border: var(--primary-color) solid 2px;
+    background-color: var(--primary-color);
+    /* border: var(--primary-color) solid 2px; */
     border-radius: 20px;
     text-align: justify;
 }
@@ -663,7 +695,7 @@ form{
     justify-content: center;
     align-items: start;
     width:100% ;
-    background-color: var(--background);
+    background-color: var(--primary-color);
     padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 50px;
@@ -679,7 +711,8 @@ form{
     cursor: pointer;
     appearance: none;
     border:none;
-    background-color: rgba(95, 158, 160, 0);
+    background:none;
+
     transition: transform 0.4s ease-in-out;
     margin-left:175px;
 }
@@ -695,10 +728,16 @@ form img {
 
 form input{
     border:none;
+    border-radius: 10px;
+    padding: 10px;
+    /* accent-color: var(--secondary-color); */
 }
 
 form textarea{
     border:none;
+    border-radius: 10px;
+    padding: 10px
+
 }
 
 
@@ -747,17 +786,24 @@ form textarea{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    height: 100%;
+    height: 120%;
     width: 100%;
     
+    /* justify-content: flex-end; */
     justify-self: center;
 
     /* background-color: var(--secondary-color); */
     /* border: magenta dashed 2px; */
 }
+#projectsMenu p{
+    font-size: 14px;
+}
 
 #projectsMenu button{
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
+    height: 100%;
     font-family: Helvetica, sans-serif;
     font-size: 18px;
     letter-spacing: 2px;
@@ -765,9 +811,12 @@ form textarea{
     border-radius: 20px;
     color: var(--text-color);
     background-color: var(--secondary-color);
+
+    justify-content: center;
+    align-content: space-between;
     /* background-color: inherit; */
     text-align: left;
-    /* justify-content: start; */
+    
     padding-left: 10px;
     /* cursor: pointer; */
 }
@@ -775,23 +824,37 @@ form textarea{
     background-color: var(--primary-color);
 }
 
+#projectsMenu button img {
+    width: 80px;
+    
+}
 /* .selected {
     background-color: var(--primary-color);
 } */
 
 #projectsMenu a {
-    background-color: whitesmoke;
-    border-radius: 20px;
-    padding: 5px;
+    /* background-color: whitesmoke; */
+    height: 65px;
+    width: 100px;
+    font-size: 60px;
+    color: #000000;
+    margin:auto;
+    margin-left: 6px;
+    margin-bottom: 15px;
+    /* border-bottom: red solid 2px; */
+    
+    padding-left: 10px;
+    /* padding-bottom: 20px; */
 }
 #projectsMenu a:hover{
     cursor: pointer;
 }
 
-/* #project1 {
-    border: magenta solid 5px;
-    background-color: var(--primary-color);
-} */
+#projectsMenu .demo {
+    padding-left: 24px;
+    margin-bottom: 15px;
+    /* border-bottom: black solid 2px; */
+}
 
 /*? ///// ----- PROJECT GALLERY ----- ///// */
 /*? /////////////////////////////////////// */
@@ -800,7 +863,7 @@ form textarea{
     height: 100%;
     width: 100%;
     border-radius: 20px;
-    background-color: var(--background);
+    /* background-color: var(--background); */
 }
 .project-gallery .numbertext{
     color: var(--text-color);
@@ -812,7 +875,7 @@ form textarea{
 }
 
 #img1 img {
-    margin-right: 0px;
+    margin-left: 100px;
 }
 #img2 img {
     /* position: absolute; */
