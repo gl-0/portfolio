@@ -441,7 +441,7 @@ html #navbar #homeLink{
     grid-template-rows: 200px 200px 400px 200px;
     grid-template-columns: 300px 600px 600px;
     grid-template-areas:
-        "logo title gallery"
+        "logo title title"
         "darkmode heading gallery"
         "navbar about gallery"
         "navbar about gallery";
@@ -751,7 +751,7 @@ form textarea{
     grid-template-rows: 200px 200px 500px 100px; /*total = 1100px */
     grid-template-columns: 300px 600px 800px;
     grid-template-areas:
-        "logo title gallery"
+        "logo title title"
         "darkmode heading gallery"
         "navbar menu gallery"
         "navbar menu dots";
