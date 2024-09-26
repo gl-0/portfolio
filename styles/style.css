@@ -200,14 +200,7 @@ html.dark .about-text{
 } */
 /*? ///////////////////////////////////// ----- SMALL SCREENS ----- ///////////////////////////////////// */
 /*? ///////////////////////////////////////////////////////////////////////////////////////////////////// */
-/*       //////////        ////    ////     
-        ///     ////       ////////////
-        ///                //   ///  //
-        ///////////        //    /   //  
-                ///        //        //
-                ///        //        //
-        //////////         //        //
-*/
+
 
 /** ----- INDEX ----- */
 /** ----------------- */
@@ -316,7 +309,7 @@ html.dark .about-text{
     width: fit-content;
     height: 100vh;
     /* margin-left: 100px; */
-    border: magenta dashed 2px;
+/*     border: magenta dashed 2px; */
 }
 
 #main-container div{
@@ -360,7 +353,7 @@ html #navbar #homeLink{
     width: 100%;
     min-width: fit-content;
     justify-content: center;
-    border: blue dotted 2px;
+/*     border: blue dotted 2px; */
 }
 
 #interests ul{
